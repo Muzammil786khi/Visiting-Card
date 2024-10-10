@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <style>
+        @font-face{
+    font-family: xyzz;
+    src: url(Kanit.zip);
+}
+@font-face{
+    font-family: ppp;
+    src: url(Libre_Baskerville.zip);
+}
+
+@font-face{
+    font-family: www;
+    src: url(Spicy_Rice.zip);
+}
+
+body{
+    background-image: url(llllllll.jfif);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif ;
+    box-sizing: border-box;
+    transition: all 0.5s linear;
+}
+
+
+section{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+   
+}
+
+.business-card{
+    width: 640px;
+    height: 360px;
+    position: relative;
+}
+
+.business-card .front,
+.business-card .back{
+    height: 300px;
+    width: 520px;
+    backface-visibility: hidden;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.business-card .front{
+    background-color: hsl(0, 50%, 3%);
+    color: #f7f6f6;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.business-card .back{
+    display: none;
+}
+
+.business-card .front img{
+    width: 340px;
+    height: 110px;
+    object-fit: cover;
+    filter: invert(2);
+    padding-left: 2px;
+
+}
+
+.business-card .front .company{
+    font-size: 32px;
+    font-weight: 600px;
+    margin-top: 16px;
+    font-family: xyzz;
+    padding: 2px;
+}
+
+.business-card .front::before{
+    content: "";
+    border-radius: 50px;
+    border: 10px solid #64d8e0;
+    position: absolute;
+    top: -25%;
+    height: 160%;
+    width: 320px;
+    transform: rotateZ(65deg);
+}
+
+.business-card .back{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #242424;
+    transform:  perspective(700px) rotateX(-180deg);
+}
+
+.business-card.flipped .front {
+    transform: perspective(700px) rotateX(180deg);
+}
+
+.business-card.flipped .back {
+    display: grid;
+    transform: perspective(700px) rotateX(0deg);
+}
+
+
+.business-card .back .image,
+.business-card .back .info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.business-card .back .image {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: rgb(186, 172, 172);
+    color: #242424;
+    align-items: center;
+
+}
+
+.business-card .back .image img {
+    width: 112px;
+    height: 112px;
+    object-fit: cover;
+    border: 2px solid #242424;
+    border-radius: 50%;
+    padding: 4px;
+   
+}
+
+.business-card .back .image h1 {
+
+    font-size: 40px;
+    font-weight: 600;
+    margin-block: 8px;
+    font-family: www;
+    color: black;
+}
+.business-card .back .image h2 u b{
+
+    font-size: 20px;
+    font-weight: 500;
+    font-family: ppp;
+    color: rgb(0, 0, 0);
+    
+}
+
+.business-card .back .info{
+
+    align-items: flex-start;
+    color: white;
+}
+.business-card .back .info .contact{
+    line-height: 20px;
+    margin-block: 8px;
+
+}
+.business-card .back .info .contact i {
+    font-size: 15px;
+    margin-right: 15px;
+    
+}
+
+.business-card .back .info .contact i a{
+    padding-left: 25px;
+    color: rgb(30, 144, 255);
+}
+
+   /* Responsive adjustments */
+   @media (max-width: 768px) {
+            .business-card {
+                width: 100%;
+            }
+
+            .business-card .front, .business-card .back {
+                height: auto;
+            }
+
+            .business-card .front .company {
+                font-size: 24px;
+            }
+
+            .business-card .back .info .contact {
+                line-height: 18px;
+            }
+        }
+        summary{
+            color:rgb(30, 144, 255) ;
+            padding-left: 50px;
+        }
+        .btn{
+            width: 100px;
+            height: 30px;
+            align-items: center;
+            margin-left: 215px;
+            background-color: black;
+            border: 2px solid none;
+            color: #03e9f4;
+        }
+       .btn:hover{
+        background: #03e9f4;
+        color: black;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+        -webkit-box-reflect: below 1px 
+        linear-gradient(transparent, #0005) ;
+        
+       }
+       p{
+        font-size: 12px;
+       }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="business-card">
+            <div class="front">
+                <img src="Hamzilogo.png" alt="">
+                <div class="company">Men's Wear House</div>
+                
+            </div>
+            <div class="back">
+                <div class="image">
+                    <img src="golden-initial-letter-am-hexagon-logo-design-vector.jpg" alt="">
+                    <h1>Fabrics</h1>
+                    <h2><u><b>WHOLESALER</b></u></h2>
+                </div>
+                <div class="info">
+                    <div class="contact">
+                        <i class="fa-solid fa-mobile-screen-button"><a href="tel:+92 3161 074 659">USMAN JUMANI</a></i>
+                    </div>
+                    <div class="contact">
+                        <i class="fa-solid fa-mobile-screen-button"><a href="tel:+92 3128 965 209">MOHSIN JUMANI</a></i>
+                    </div>
+                    <div class="contact">
+                        <i class="fa-brands fa-facebook">
+                            <a href="https://www.facebook.com/hamziluxurywear">hamziluxurywear</a>
+                        </i>
+                    </div>
+                    <div class="contact">
+                        <i class="fa-brands fa-instagram">
+                            <a href="https://www.instagram.com/hamziluxurywear/">hamziluxurywear</a>
+                        </i>
+                        <div class="contact">
+                            <i class="fa-solid fa-globe">
+                                <a href="
+                                https://bit.ly/3m7Im1f">//hamziluxurywear.com</a>
+                            </i>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <i class="fa-solid fa-shop">
+                            <a href="https://maps.app.goo.gl/ShDkp6NwkjDKCoaLA">Shop#69, 2nd Floor</a>
+                        </i>
+                        <div class="contact">
+                            <details>
+                                <summary><b><u>Deals In</u></b></summary>
+                                <p> Hamzi, Zephyr, Al Javed, Grace, Moon Jee, Bonanza Satrangi, Ahmed Jee</p>
+                            </details>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn" id="flip-button">Flip Card</button>
+
+    
+    </section>
+    <script>
+        const businessCard = document.querySelector('.business-card');
+        const flipButton = document.getElementById('flip-button');
+    
+        flipButton.addEventListener('click', () => {
+            businessCard.classList.toggle('flipped');
+        });
+    </script>
+    
+    </body>
+</html>
